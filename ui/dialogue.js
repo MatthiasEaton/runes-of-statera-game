@@ -198,7 +198,6 @@ if (currentLine.special) {
           { 
             text: "Follow the King", 
             action: () => {
-              console.log("Player chose the King path");
               gameState.pathChosen = "king";
               // Start fade for Castle path
           gameState.nextScene = "forest3";        // scene to load
@@ -214,7 +213,6 @@ if (currentLine.special) {
           { 
             text: "Protect the Forest", 
             action: () => {
-              console.log("Player chose the Forest path");
               gameState.pathChosen = "forest";
               // Start fade for Forest path
           gameState.nextScene = "castle";          // scene to load
@@ -288,7 +286,6 @@ if (
   gameState.justCollectedRune?.name === "Rune of Umbra" &&
   !gameState.wizardSpawned
 ) {
-  console.log("Wizard spawn triggered!");
 
   gameState.wizardSpawned = true;
 

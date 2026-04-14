@@ -137,7 +137,6 @@ export function preloadAssets(callback) {
     img.addEventListener("load", () => {
       loaded++;
       if (loaded === images.length) {
-        console.log("All images loaded!");
         callback(); // start the game after all images loaded
       }
     });

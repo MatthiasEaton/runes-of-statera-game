@@ -260,7 +260,6 @@ if (!wereWolf.attackHit && wereWolf.frameX === wereWolf.maxFrames - 1 && !player
   if (colliding) {
     player.health -= wereWolf.attackDamage;
     player.health = Math.max(0, player.health);
-    console.log(`Player hit! Health now: ${player.health}`);
     wereWolf.attackHit = true; // prevent multiple hits in the same animation
   }
 }

@@ -44,8 +44,6 @@ export function givePotions(amount) {
     });
     insertIndex++; // move to next slot for next potion
   }
-
-  console.log(`Added ${amount} healing potions`, inventoryItems);
 }
 
 export function giveRune() {
@@ -69,8 +67,6 @@ export function giveRune() {
     name: "Rune of Lumen",
     type: "keyItem"
   });
-
-  console.log("Added Rune of Lumen", inventoryItems);
 }
 
 
@@ -105,7 +101,6 @@ export function deselectItem() {
 }
 
 inventoryItems.forEach((item, i) => {
-  console.log(`Drawing slot ${i}: ${item.name}, img =`, item.img);
   const slotX = slotStartX + (i % cols) * slotSpacing;
   const slotY = slotStartY + Math.floor(i / cols) * slotSpacing;
   ctx.drawImage(item.img, slotX, slotY, slotSize, slotSize);
@@ -183,7 +178,6 @@ export function addItem(itemImg) {
   if (inventoryItems.length < 16) { // max 4x4
     inventoryItems.push({ img: itemImg });
   } else {
-    console.log("Inventory full!");
   }
 }
 
@@ -478,8 +472,6 @@ if (inventoryVariables.warningMessage) {
 drawDiscardModalCloseButton();
 }
 
-console.log(inventoryImg.width, inventoryImg.height);
-
 export function drawInventoryCloseButton() {
   ctx.save();
   // Red button with rounded corners, border, and shadow
@@ -548,7 +540,6 @@ export function discardItem(itemIndex) {
 
   // Remove item from array
   inventoryItems.splice(itemIndex, 1);
-  console.log(`${item.name} discarded.`);
   
   // Close discard modal
   inventoryVariables.selectedItem = null;

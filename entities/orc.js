@@ -258,7 +258,6 @@ if (!orc.attackHit && orc.frameX === orc.maxFrames - 1 && !player.isDead) {
   if (colliding) {
     player.health -= orc.attackDamage;
     player.health = Math.max(0, player.health);
-    console.log(`Player hit! Health now: ${player.health}`);
     orc.attackHit = true; // prevent multiple hits in the same animation
   }
 }

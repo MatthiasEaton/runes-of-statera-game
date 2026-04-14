@@ -197,9 +197,8 @@ if (
   mouseY >= settingsY &&
   mouseY <= settingsY + bagSize
 ) {
-  console.log("Settings icon clicked");
-  toggleSettings(); // 👈 we'll hook this up
-  return; // stop further processing
+  toggleSettings();
+  return;
 }
 
 // --- Settings close button ---
@@ -241,12 +240,11 @@ if (settingsOpen && settingsUI.muteBtn) {
   if (mouseX >= bagX && mouseX <= bagX + bagSize &&
       mouseY >= bagY && mouseY <= bagY + bagSize) {
     toggleInventory();
-    return; // Stop further processing
+    return;
   }
 
 // --- 3. Inventory close button (top-right X) ---
 if (inventoryVariables.inventoryOpen) {
-  console.log("Close inventory button clicked");
   const closeX = inventoryUI.x + inventoryUI.width - inventoryUI.closeSize + 50;
   const closeY = inventoryUI.y;
   const closeSize = inventoryUI.closeSize;
@@ -284,7 +282,6 @@ if (inventoryVariables.inventoryOpen) {
       if (mouseX >= slotX && mouseX <= slotX + slotSize &&
           mouseY >= slotY && mouseY <= slotY + slotSize) {
         inventoryVariables.selectedItem = i; // store index
-        console.log("Selected item:", inventoryItems[i].name);
         inventoryVariables.selectedItem = i;
         return; // stop after selecting one
       }
@@ -299,7 +296,6 @@ if (inventoryVariables.selectedItem !== null) {
     mouseY >= discardModal.drinkButtonY &&
     mouseY <= discardModal.drinkButtonY + discardModal.drinkButtonHeight
   ) {
-    console.log("Drink button clicked");
 
     const itemIndex = inventoryVariables.selectedItem;
     const item = inventoryItems[itemIndex];
@@ -339,7 +335,6 @@ if (inventoryVariables.selectedItem !== null) {
       mouseY >= discardModal.buttonY &&
       mouseY <= discardModal.buttonY + discardModal.buttonHeight) {
 
-    console.log("Discard button clicked");
 
     const itemIndex = inventoryVariables.selectedItem;
 
@@ -380,23 +375,22 @@ if (dialogueState.choiceActive) {
       mouseY <= y + height;
 
     if (clicked) {
-      console.log("Clicked choice:", choice.text);
 
       handleChoiceSelection(choice);
 
-      return; // stop after click
+      return;
     }
   });
 
-  return; // 🚨 IMPORTANT: stop other click logic when menu is open
+  return;
 }
 });
 
 function handleChoiceSelection(choice) {
-  console.log("Player chose:", choice.text);
+
 
   if (choice.action) {
-    choice.action(); // 🔥 THIS is the key
+    choice.action();
   }
 }
 

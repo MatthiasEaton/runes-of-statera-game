@@ -64,7 +64,6 @@ export const playerHitbox = {
 // --- XP gain function ---
 export function gainXP(amount) {
   player.xp += amount;
-  console.log(`Gained ${amount} XP, total now: ${player.xp}/${player.xpToNextLevel}`);
 
   while (player.xp >= player.xpToNextLevel) {
     player.xp -= player.xpToNextLevel;
@@ -82,7 +81,6 @@ export function gainXP(amount) {
     gameState.levelUpActive = true;
     gameState.levelUpMessage = `Level Up! You are now level ${player.level}\nHP +10, Attack +5`;
 
-    console.log(`Level up! Now level ${player.level}`);
   }
 
   // Keep XP from going negative
@@ -98,7 +96,6 @@ export function givePlayerItems(items) {
   if (!items) return;
   items.forEach(item => {
     inventory.push(item);
-    console.log(`Recieved: ${item.name}`);
   });
 }
 
@@ -169,7 +166,6 @@ if (player.frameTimer >= player.frameInterval) {
 
     // ✅ Trigger once when reaching last frame
     if (player.frameX === player.maxFrames - 1 && !player.deathAnimationDone) {
-      console.log("Death animation DONE");
       player.deathAnimationDone = true;
     }
 
@@ -234,8 +230,6 @@ export function giveRune(rune) {
     type: "rune",
     description: rune.description
   });
-
-  console.log(`Added rune: ${rune.name}`, inventoryItems);
 }
 
 
