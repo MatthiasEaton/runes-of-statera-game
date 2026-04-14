@@ -73,7 +73,7 @@ export const armoredAxemanSprite = new Image();
 armoredAxemanSprite.src = "./assets/images/Armored-Axeman.png";
 
 export const wereWolfSprite = new Image();
-wereWolfSprite.src = "./assets/images/WereWolf.png";
+wereWolfSprite.src = "./assets/images/Werewolf.png";
 
 export const greatswordSkeletonSprite = new Image();
 greatswordSkeletonSprite.src = "./assets/images/Greatsword-Skeleton.png";
@@ -82,7 +82,7 @@ export const werebearSprite = new Image();
 werebearSprite.src = "./assets/images/Werebear.png";
 
 export const orcRiderSprite = new Image();
-orcRiderSprite.src = "./assets/images/Orc-Rider.png";
+orcRiderSprite.src = "./assets/images/Orc-rider.png";
 
 export const lancerSprite = new Image();
 lancerSprite.src = "./assets/images/Lancer.png";
@@ -103,7 +103,7 @@ export const wizardSprite = new Image();
 wizardSprite.src = "./assets/images/Wizard.png";
 
 export const wizardEffectSprite = new Image();
-wizardEffectSprite.src = "./assets/images/wizard-effect.png";
+wizardEffectSprite.src = "./assets/images/Wizard-Effect.png";
 
 export const rune1 = new Image();
 rune1.src = "./assets/images/rune-1.png";
