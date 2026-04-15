@@ -40,7 +40,7 @@ Play as a lone warrior tasked with collecting the ancient **Runes of Statera**â€
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/MatthiasEaton/runes-of-statera-game.git
+git clone https://github.com/MatthiasEaton/the-runes-of-statera.git
 ```
 
 2. Open the project folder
